@@ -125,6 +125,22 @@
           "iconUrl": "",
           "iconPosition": "bottom"
         }
+      },
+      {
+        "pageName": "page2",
+        "fullPath": "./app/project/components/pages/page2/",
+        "fileName": "page2.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 2,
+          "label": "page2",
+          "isI18nLabel": false,
+          "iconClass": "fas fa-file-alt",
+          "iconUrl": "",
+          "iconPosition": "bottom"
+        }
       }
     ],
     "widgets": []
