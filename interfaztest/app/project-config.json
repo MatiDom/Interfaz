@@ -3,7 +3,7 @@
   "projectType": "shell-template",
   "version": "0.0.1",
   "faviconPath": "favicon.ico",
-  "menuOrientation": "vertical",
+  "menuOrientation": "none",
   "selectedTheme": "light-theme",
   "useWebXPanel": true,
   "forceDeviceXPanel": false,
@@ -20,7 +20,6 @@
         "url": [
           "./app/template/assets/img/Yacht_Background.jpeg"
         ]
-     
       }
     },
     {

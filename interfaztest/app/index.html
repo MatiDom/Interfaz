@@ -30,10 +30,13 @@
 
   <!-- Loader -->
   <!-- <div id="loader" class="loader"></div> -->
-
+  
   <% for (var js in htmlWebpackPlugin.files.js) { %>
   <script src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
   <% } %>
+  <script src="app/assets/main.js"></script>
+
+
 </body>
 
 </html>
