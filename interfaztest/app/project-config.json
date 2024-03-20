@@ -3,7 +3,7 @@
   "projectType": "shell-template",
   "version": "0.0.1",
   "faviconPath": "favicon.ico",
-  "menuOrientation": "horizontal",
+  "menuOrientation": "vertical",
   "selectedTheme": "light-theme",
   "useWebXPanel": true,
   "forceDeviceXPanel": false,
@@ -12,27 +12,28 @@
       "name": "light-theme",
       "extends": "light-theme",
       "brandLogo": {
-        "url": "./app/template/assets/img/ch5-logo-light.svg",
+        "url": "./app/template/assets/img/Logo1.png",
         "alt": "Crestron Logo",
         "receiveStateUrl": ""
       },
       "backgroundProperties": {
-        "backgroundColor": [
-          "#f8f8f8"
+        "url": [
+          "./app/template/assets/img/Yacht_Background.jpeg"
         ]
+     
       }
     },
     {
       "name": "dark-theme",
       "extends": "dark-theme",
       "brandLogo": {
-        "url": "./app/template/assets/img/ch5-logo-dark.svg",
+        "url": "./app/template/assets/img/Logo1.png",
         "alt": "Crestron Logo",
         "receiveStateUrl": ""
       },
       "backgroundProperties": {
-        "backgroundColor": [
-          "#1a1a1a"
+        "url": [
+          "./app/template/assets/img/Yacht_Background.jpeg"
         ]
       }
     },
@@ -40,13 +41,13 @@
       "name": "project-light-theme",
       "extends": "light-theme",
       "brandLogo": {
-        "url": "./app/template/assets/img/ch5-logo-light.svg",
+        "url": "./app/template/assets/img/Logo1.png",
         "alt": "Crestron Logo",
         "receiveStateUrl": ""
       },
       "backgroundProperties": {
-        "backgroundColor": [
-          "#f8f8f8"
+        "url": [
+          "./app/template/assets/img/Yacht_Background.jpg"
         ]
       }
     },
@@ -54,13 +55,13 @@
       "name": "project-dark-theme",
       "extends": "dark-theme",
       "brandLogo": {
-        "url": "./app/template/assets/img/ch5-logo-dark.svg",
+        "url": "./app/template/assets/img/Logo1.png",
         "alt": "Crestron Logo",
         "receiveStateUrl": ""
       },
       "backgroundProperties": {
-        "backgroundColor": [
-          "#1a1a1a"
+        "url": [
+          "./app/template/assets/img/Yacht_Background.jpeg"
         ]
       }
     },
@@ -68,13 +69,13 @@
       "name": "project-custom-theme",
       "extends": "light-theme",
       "brandLogo": {
-        "url": "./app/template/assets/img/ch5-logo-light.svg",
+        "url": "./app/template/assets/img/Logo1.png",
         "alt": "Crestron Logo",
         "receiveStateUrl": ""
       },
       "backgroundProperties": {
-        "backgroundColor": [
-          "#f8f8f8"
+        "url": [
+          "./app/template/assets/img/Yacht_Background.jpeg"
         ]
       }
     }
@@ -140,6 +141,54 @@
           "iconClass": "fas fa-file-alt",
           "iconUrl": "",
           "iconPosition": "bottom"
+        }
+      },
+      {
+        "pageName": "page3",
+        "fullPath": "./app/project/components/pages/page3/",
+        "fileName": "page3.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 3,
+          "label": "page3",
+          "isI18nLabel": false,
+          "iconClass": "fas fa-file-alt",
+          "iconUrl": "",
+          "iconPosition": ""
+        }
+      },
+      {
+        "pageName": "page4",
+        "fullPath": "./app/project/components/pages/page4/",
+        "fileName": "page4.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 4,
+          "label": "page4",
+          "isI18nLabel": false,
+          "iconClass": "fas fa-file-alt",
+          "iconUrl": "",
+          "iconPosition": ""
+        }
+      },
+      {
+        "pageName": "page5",
+        "fullPath": "./app/project/components/pages/page5/",
+        "fileName": "page5.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 5,
+          "label": "page5",
+          "isI18nLabel": false,
+          "iconClass": "fas fa-file-alt",
+          "iconUrl": "",
+          "iconPosition": ""
         }
       }
     ],
