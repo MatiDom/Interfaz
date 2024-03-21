@@ -3,7 +3,7 @@
   "projectType": "shell-template",
   "version": "0.0.1",
   "faviconPath": "favicon.ico",
-  "menuOrientation": "horizontal",
+  "menuOrientation": "none",
   "selectedTheme": "light-theme",
   "useWebXPanel": true,
   "forceDeviceXPanel": false,
@@ -186,6 +186,38 @@
           "label": "page5",
           "isI18nLabel": false,
           "iconClass": "fas fa-file-alt",
+          "iconUrl": "",
+          "iconPosition": ""
+        }
+      },
+      {
+        "pageName": "page6",
+        "fullPath": "./app/project/components/pages/page6/",
+        "fileName": "page6.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 6,
+          "label": "page6",
+          "isI18nLabel": false,
+          "iconClass": "",
+          "iconUrl": "",
+          "iconPosition": ""
+        }
+      },
+      {
+        "pageName": "page7",
+        "fullPath": "./app/project/components/pages/page7/",
+        "fileName": "page7.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 7,
+          "label": "page7",
+          "isI18nLabel": false,
+          "iconClass": "",
           "iconUrl": "",
           "iconPosition": ""
         }
