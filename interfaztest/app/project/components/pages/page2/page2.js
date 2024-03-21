@@ -11,39 +11,40 @@
 /*jslint es6 */
 /*global serviceModule, CrComLib */
 
-const page2Module = (() => {
-    'use strict';
+ const page2Module = (() => {
+   'use strict';
 
-    // BEGIN::CHANGEAREA - your javascript for page module code goes here         
+//      BEGIN::CHANGEAREA - your javascript for page module code goes here         
 
     /**
      * Initialize Method
      */
+    
     function onInit() {
-       serviceModule.addEmulatorScenarioNoControlSystem("./app/project/components/pages/page2/page2-emulator.json");
-       // Uncomment the below line and comment the above to load the emulator all the time.
-       // serviceModule.addEmulatorScenario("./app/project/components/pages/page2/page2-emulator.json");       
+      serviceModule.addEmulatorScenarioNoControlSystem("./app/project/components/pages/page2/page2-emulator.json");
+      // Uncomment the below line and comment the above to load the emulator all the time.
+   // serviceModule.addEmulatorScenario("./app/project/components/pages/page2/page2-emulator.json");       
     }
-
+    
     /**
      * private method for page class initialization
      */
-    let loadedSubId = CrComLib.subscribeState('o', 'ch5-import-htmlsnippet:page2-import-page', (value) => {
-        if (value['loaded']) {
-            onInit();
-            setTimeout(() => {
-                CrComLib.unsubscribeState('o', 'ch5-import-htmlsnippet:page2-import-page', loadedSubId);
-                loadedSubId = '';
-            });
+   let loadedSubId = CrComLib.subscribeState('o', 'ch5-import-htmlsnippet:page2-import-page', (value) => {
+       if (value['loaded']) {
+           onInit();
+           setTimeout(() => {
+               CrComLib.unsubscribeState('o', 'ch5-import-htmlsnippet:page2-import-page', loadedSubId);
+               loadedSubId = '';
+           });
         }
     }); 
 
-    /**
-     * All public method and properties are exported here
-     */
-    return {
-    };
+//     /**
+//      * All public method and properties are exported here
+//      */
+//     return {
+//     };
 
-    // END::CHANGEAREA
+//     // END::CHANGEAREA
 
-})();
+ })();

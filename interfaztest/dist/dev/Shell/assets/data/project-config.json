@@ -189,6 +189,38 @@
           "iconUrl": "",
           "iconPosition": ""
         }
+      },
+      {
+        "pageName": "page6",
+        "fullPath": "./app/project/components/pages/page6/",
+        "fileName": "page6.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 6,
+          "label": "page6",
+          "isI18nLabel": false,
+          "iconClass": "",
+          "iconUrl": "",
+          "iconPosition": ""
+        }
+      },
+      {
+        "pageName": "page7",
+        "fullPath": "./app/project/components/pages/page7/",
+        "fileName": "page7.html",
+        "preloadPage": true,
+        "cachePage": false,
+        "standAloneView": false,
+        "navigation": {
+          "sequence": 7,
+          "label": "page7",
+          "isI18nLabel": false,
+          "iconClass": "",
+          "iconUrl": "",
+          "iconPosition": ""
+        }
       }
     ],
     "widgets": []
