@@ -57,30 +57,8 @@
 <!-- Content -->
 <div id="content-index-page">
 	<ch5-background id="template-content-background"></ch5-background>
-	<div class="category-container">
-
-			<ch5-list id="horizontal-menu-swiper-thumb" receiveStateScrollTo="scrollToMenu" scrollbar="false" class="swiper-thumb"
-				orientation="horizontal" maxHeight="auto" indexId="idx" itemHeight="100%">
-				<template>
-					<!-- <div class="horizontal-list-item">
-						<ch5-button id="menu-list-id-{{idx}}" type="text" shape="rectangle" stretch="both"
-							receiveStateSelected="active_state_class_{{idx}}"
-							onRelease="templatePageModule.navMenu({{idx}})"></ch5-button>
-					</div> -->
-					<!-- <div class="category" id="menu-list-id-{{idx}}" receiveStateSelected="active_state_class_{{idx}}" onRelease="templatePageModule.navMenu({{idx}})">{{idx}}</div> -->
-
-					
-				</template>
-			</ch5-list>
 			
-			
-
-		<!-- <div class="category" id="1_watch">Watch</div>
-		<div class="category" id="1_listen">Listen</div>
-		<div class="category" id="1_lights">Lights</div>
-		<div class="category" id="1_blinds">Blinds</div>
-		<div class="category" id="1_temp">Temperature</div>
-		<div class="category" id="1_settings">Settings</div> -->
+		
 
 
 			<a class="thumb-action" onclick="templatePageModule.openThumbNav()">
@@ -97,6 +75,25 @@
 	<ch5-triggerview id="triggerviewInContentHorizontal" class="triggerview">
 	</ch5-triggerview>
 </template>
+
+
+<template id="template-content-page-section-custom">
+	<div class="category-container">
+		<div 
+			orientation="horizontal" maxHeight="auto" indexId="idx" itemHeight="100%">
+			<template>
+				<div class="category">
+					<div id="menu-list-id-{{idx}}" type="text" shape="rectangle" stretch="both" receiveStateSelected="active_state_class_{{idx}}">
+						Button Text
+					</div>
+				</div>
+			</template>
+		</div>
+		<ch5-triggerview id="triggerviewInContentCustom" class="triggerview">
+		</ch5-triggerview>
+</template>
+
+
 
 <template id="template-content-page-section-vertical">
 	<div id="content-index-body">

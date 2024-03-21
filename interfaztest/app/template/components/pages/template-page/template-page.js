@@ -63,7 +63,7 @@ const templatePageModule = (() => {
 				try {
 					// menuMoveInViewPort();
 
-					if (projectConfigModule.getMenuOrientation() === "horizontal" || projectConfigModule.getMenuOrientation() === "vertical") {
+					if (projectConfigModule.getMenuOrientation() === "horizontal" || projectConfigModule.getMenuOrientation() === "vertical" || projectConfigModule.getMenuOrientation() === "custom") {
 						let intersectionOptions = {
 							rootMargin: '0px',
 							threshold: 1.0
@@ -255,6 +255,8 @@ const templatePageModule = (() => {
 						data = document.getElementById("template-content-page-section-horizontal").innerHTML;
 					} else if (projectConfigResponse.menuOrientation === "vertical") {
 						data = document.getElementById("template-content-page-section-vertical").innerHTML;
+					} else if (projectConfigResponse.menuOrientation === "custom") {
+						data = document.getElementById("template-content-page-section-custom").innerHTML;
 					} else {
 						data = document.getElementById("template-content-page-section-none").innerHTML;
 					}
@@ -268,6 +270,8 @@ const templatePageModule = (() => {
 						document.getElementById("horizontal-menu-swiper-thumb")?.setAttribute("size", pagesList.length);
 					} else if (projectConfigResponse.menuOrientation === "vertical") {
 						document.getElementById("vertical-menu-swiper-thumb")?.setAttribute("size", pagesList.length);
+					//  } else if (projectConfigResponse.menuOrientation === "custom") {
+					// document.getElementById("custom-menu-swiper-thumb")?.setAttribute("size", pagesList.length);
 					}
 
 					let triggerviewInContent = "";
@@ -275,6 +279,8 @@ const templatePageModule = (() => {
 						triggerviewInContent = document.getElementById("triggerviewInContentHorizontal");
 					} else if (projectConfigResponse.menuOrientation === "vertical") {
 						triggerviewInContent = document.getElementById("triggerviewInContentVertical");
+					} else if (projectConfigResponse.menuOrientation === "custom") {
+							triggerviewInContent = document.getElementById("triggerviewInContentCustom");
 					} else {
 						triggerviewInContent = document.getElementById("triggerviewInContentNone");
 					}
@@ -404,6 +410,18 @@ const templatePageModule = (() => {
 										});
 									}
 								});
+							} else if (projectConfigResponse.menuOrientation === "custom") {
+								let loadListCh5 = CrComLib.subscribeState('o', 'ch5-list', (value) => {
+									if (value['loaded'] && (value['id'] === "horizontal-menu-swiper-thumb")) {
+										loadCh5ListForMenu(projectConfigResponse, responseArrayForNavPages);
+										configureWebXPanel(projectConfigResponse);
+										navigateToFirstPage(projectConfigResponse, responseArrayForNavPages);
+										setTimeout(() => {
+											CrComLib.unsubscribeState('o', 'ch5-list', loadListCh5);
+											loadListCh5 = null;
+										});
+									}
+								});
 							} else {
 								configureWebXPanel(projectConfigResponse);
 								navigateToFirstPage(projectConfigResponse, responseArrayForNavPages);
@@ -483,7 +501,7 @@ const templatePageModule = (() => {
 					menu.setAttribute("label", responseArrayForNavPages[i].navigation.label);
 				}
 				menu.setAttribute("iconClass", responseArrayForNavPages[i].navigation.iconClass);
-				if (projectConfigResponse.menuOrientation === 'horizontal') {
+				if (projectConfigResponse.menuOrientation === 'horizontal' || projectConfigResponse.menuOrientation === 'custom') {
 					menu.setAttribute("iconPosition", responseArrayForNavPages[i].navigation.iconPosition);
 				}
 				menu.setAttribute("receiveStateSelected", "active_state_class_" + responseArrayForNavPages[i].pageName);
@@ -537,6 +555,7 @@ const templatePageModule = (() => {
 		document.getElementById("header-section-page-template2")?.remove();
 		document.getElementById("template-content-page-section-horizontal")?.remove();
 		document.getElementById("template-content-page-section-vertical")?.remove();
+		document.getElementById("template-content-page-section-custom")?.remove();
 		document.getElementById("template-content-page-section-none")?.remove();
 		document.getElementById("footer-section-page-template1")?.remove();
 		document.getElementById("footer-section-page-template2")?.remove();

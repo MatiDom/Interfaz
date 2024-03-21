@@ -213,7 +213,9 @@
       "enum": [
         "horizontal",
         "vertical",
+        "custom",
         "none"
+        
       ],
       "type": "string"
     },
